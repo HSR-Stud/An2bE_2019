@@ -1,0 +1,46 @@
+%Darstellung Dokument =========================================================================================
+
+\documentclass[10pt,twoside,a4paper,fleqn]{article}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,includeheadfoot]{geometry} %Einstellungen der Seitenr"ander
+
+
+%wichtige Standard-Packages ===================================================================================
+
+%Darstellung Text
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel,varioref}
+
+%Mathematik
+\usepackage{amssymb,amsmath,fancybox,graphicx,color,lastpage,wrapfig,fancyhdr,hyperref,verbatim, mathtools, multicol, bigints}
+\usepackage[figuresright]{rotating}
+
+
+%PDF Infos =============================================================================================
+
+\hypersetup{pdfauthor={\authorinfo},pdftitle={\titleinfo},colorlinks=false}
+%linkbordercolor=white
+\author{\authorinfo}
+\title{\titleinfo}
+
+
+% Layout =================================================================================================
+
+%Kopf- und Fusszeile
+\pagestyle{fancy}
+\fancyhf{}
+
+%Linien oben und unten
+\renewcommand{\headrulewidth}{0.5pt} 
+\renewcommand{\footrulewidth}{0.5pt}
+
+%Kopfzeile
+\fancyhead[L]{\titleinfo{ }\tiny{(\versioninfo)}}
+\fancyhead[R]{Seite \thepage { }von \pageref{LastPage}}
+
+%Fusszeile
+\fancyfoot[L]{\footnotesize{\authorinfo}}
+\fancyfoot[C]{\footnotesize{\licence \quad $\rightarrow$ \href{https://github.com/HSR-Stud}{Github: HSR-Stud}}}
+\fancyfoot[R]{\footnotesize{\today}}
+
+
+
